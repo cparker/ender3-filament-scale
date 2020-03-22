@@ -1,0 +1,8 @@
+{
+    "sketch": "arduino-loadcell-driver/arduino-loadcell-driver.ino",
+    "board": "arduino:avr:nano",
+    "configuration": "cpu=atmega328",
+    "output": "build",
+    "port": "/dev/cu.wchusbserial14140",
+    "programmer": "AVR ISP"
+}
