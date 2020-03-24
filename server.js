@@ -24,11 +24,11 @@ const parser = new Readline()
 port.pipe(parser)
 
 function sendSlack(message) {
-  // slack.send({
-  //   channel:'#ender',
-  //   text:message
-  // })
-  console.log('sending slack ', message)
+   slack.send({
+     channel:'#ender',
+     text:message
+   })
+  console.log(`sending slack message at ${new Date()}\n ${message}`)
 }
 
 function getActivePrintStatus() {
@@ -99,5 +99,7 @@ function handleSerialInput(input) {
     handleJobStatus(onlyFilamentWeight)
   }
 }
+
+slack.send({ channel:'#ender', text:`ender3-filament-scale starting up at ${new Date()}` })
 
 parser.on('data', handleSerialInput)
