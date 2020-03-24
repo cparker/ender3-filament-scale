@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.19.2",
+    "lodash": "^4.17.15",
     "serialport": "^8.0.7",
     "slack-notify": "^0.1.7"
   },
